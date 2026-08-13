@@ -27,8 +27,16 @@ def initialize_parameters(n_features):
     w = np.zeros(n_features)
     return {'w' : w , 'b' : b}
 
-# Step 3 - compute_scores (not yet solved)
-# TODO: implement
+# Step 3 - compute_scores
+import numpy as np
+
+def compute_scores(x, params):
+    """Return raw linear scores x @ w + b, shape (n_samples,)."""
+    # TODO: score each example as a linear function of the current weights and bias.
+    w= params["w"]
+    b= params["b"]
+    pred = x @ w + b
+    return pred
 
 # Step 4 - predict_from_scores (not yet solved)
 # TODO: implement
